@@ -1,0 +1,67 @@
+<div id="wrapper">
+    <%= render partial: "static/header" %>
+    <div id="page-wrapper" style="heigth:100%;">
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Downloads
+                    </h1>
+                </div>
+            </div>
+            <!-- /.row -->
+            <%= link_to 'Download Config', home_download_config_path, :id => @master %>
+		    
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Configration Files </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Configuration File</td>
+                                            <td><%= link_to 'Download Config', home_download_config_path, :id => @master %>/td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Software </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Windows</td>
+                                            <td><%= link_to 'Download Config', home_download_config_path, :id => @master %>/td>
+                                            <td>Mac</td>
+                                            <td><%= link_to 'Download Config', home_download_config_path, :id => @master %>/td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->

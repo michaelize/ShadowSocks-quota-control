@@ -1,0 +1,13 @@
+<p>Welcome <%= @firstname.to_s + " " + @lastname.to_s %>!</p>
+
+<p>    请点击以下链接激活你的账户：</p>
+
+<p>    <%= link_to '激活账户', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p>    或复制下方链接到浏览器地址栏：</p>
+
+<p>    <%= link_to confirmation_url(@resource, confirmation_token: @token), confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p>太酷 <%= link_to<%= ENV['HOSTNAME'], 'http://' + ENV['HOSTNAME'] %></p>
+
+<p> 2015 </p>

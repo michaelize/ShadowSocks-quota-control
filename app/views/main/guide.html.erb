@@ -1,0 +1,95 @@
+<div id="wrapper">
+    <%= render partial: "static/header" %>
+    <div id="page-wrapper" style="heigth:100%;">
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Installation Guide
+                    </h1>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> ShadowSocks </h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>
+                                    下载并安装软件。支持 Windows、Mac、Android 及 iOS 的 Shadowsocks 应用。
+                                </li>
+                                <li>
+                                    按照以下信息配置应用。
+                                    <ul>
+                                        <li>IP
+                                            <ul>
+                                                <li>45.55.29.7</li>
+                                            </ul>
+                                        </li>
+                                        <li>端口
+                                            <ul>
+                                                <li><%= @user.id+50000 %></li>
+                                            </ul>
+                                        </li>
+                                        <li>密码
+                                            <ul>
+                                                <li>你的 Email</li>
+                                            </ul>
+                                        </li>
+                                        <li>认证方式
+                                            <ul>
+                                                <li>rc4-md5</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> OpenVPN </h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>根据电脑系统下载对应的软件。
+                                    <ul>
+                                        <li>Windows 若是不清楚系统版本，可以直接下载 32 位通用版。</li>
+                                    </ul>
+                                </li>
+                                <li>安装软件。</li>
+                                <li>下载配置文件。</li>
+                                <li>双击打开下载的配置文件。</li>
+                                <li>点击应用托盘图标，连接 Client。</li>
+                                <li>在弹出的对话框中输入用户名和密码。
+                                    <ul>
+                                        <li>用户名为 edu 结尾的注册邮箱。</li>
+                                        <li>密码为登录密码。</li>
+                                    </ul>
+                                </li>
+                                <li>成功连接后可能需要稍后片刻。</li>
+                                <li>结束时请断开连接。</li>
+                                <li>每位用户有 5 GB 流量。如需增加，请联系 support@tai.cool。</li>
+                            </ul>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->

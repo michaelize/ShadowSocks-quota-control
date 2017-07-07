@@ -1,0 +1,24 @@
+.Absolute-Center-Parent {
+  	display: table;
+	width: 100%;
+	height: 100%; /* For at least Firefox */
+	min-height: 100%;
+  	background:white;
+}
+
+.Absolute-Center {
+  	display: table-cell;
+  	vertical-align: middle;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}

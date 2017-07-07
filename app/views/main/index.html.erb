@@ -1,0 +1,90 @@
+<div id="wrapper">
+    <%= render partial: "static/header" %>
+    <div id="page-wrapper" style="heigth:100%;">
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Dashboard <small>Statistics Overview</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-dashboard"></i> Dashboard
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="alert alert-info alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <i class="fa fa-info-circle"></i>  <strong>Welcome!</strong> <%= @user.firstname + " " + @user.lastname %>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> General </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Email</th>
+                                            <th>User ID</th>
+                                            <th>College</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><%= @user.email %></td>
+                                            <td><%= 50000+@user.id %></td>
+                                            <td><%= @user.college %></td>
+                                            <td><% if @user.active == true %> Active <% else %> Suspended <% end %></td>
+                                        </tr>
+                                    </tbody>
+                                    <thead>
+                                        <tr>
+                                            <th>Quota</th>
+                                            <th>Quota Cycle</th>
+                                            <th>Last Quota Update</th>
+                                            <th>Used Quota</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><%= @user.stat.quota_bytes/1024/1024/1024 %> GB</td>
+                                            <td><%= @user.stat.quota_cycle %> Days</td>
+                                            <td><%= @user.stat.origin_time %></td>
+                                            <td><%= (@user.stat.used_quota/1024.0/1024.0/1024.0).round(5)+((@user.ss_upload+@user.ss_download)/1024.0/1024.0/1024.0).round(5) %> GB</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-right">
+                                <%= link_to 'View All Activities <i class="fa fa-arrow-circle-right"></i>'.html_safe, home_activities_path %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->

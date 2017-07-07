@@ -1,0 +1,39 @@
+<%= render partial: "static/header" %>
+<div class="container Absolute-Center-Parent">
+    <div class="row row-centered Absolute-Center">
+        <div id="logo-container"></div>
+        <div class="col-xs-10 col-sm-8 col-md-3 col-lg-3 col-centered">
+            <h2>Change your password</h2>
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+                <% if notice %>
+                <p class="alert alert-success"><%= notice %></p>
+                <% end %>
+                <% if alert %>
+                <p class="alert alert-danger"><%= alert %></p>
+                <% end %>
+                <%= devise_error_messages! %>
+                <%= f.hidden_field :reset_password_token %>
+
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <div class="field form-group input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <%= f.password_field :password, autofocus: true, autocomplete: "off", :class=>"form-control", :placeholder=>"New Password" %>
+                </div>
+
+                <div class="field form-group input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <%= f.password_field :password_confirmation, autocomplete: "off", :class=>"form-control", :placeholder=>"Confirm New Password" %>
+                </div>
+
+                <div class="actions form-group">
+                    <%= f.submit "Change my password", :class=>"btn btn-def btn-block" %>
+                </div>
+            <% end %>
+            <div class="form-group text-center">
+                <%= render "users/shared/links" %>
+            </div>
+        </div>
+    </div>
+</div>

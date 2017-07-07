@@ -1,0 +1,9 @@
+.banner {
+	color: white;
+}
+
+.banner .bk-dark {
+  border-radius: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
